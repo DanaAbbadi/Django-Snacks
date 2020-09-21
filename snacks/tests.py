@@ -12,7 +12,7 @@ class SnacksTest(SimpleTestCase):
         self.assertEquals(expected, actual)
 
     def test_home_page_template(self):
-        url = reverse('home')
+        url = reverse('snacks-home')
         response = self.client.get(url)
         actual = 'snacks-home.html'
         self.assertTemplateUsed(response, actual)
